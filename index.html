@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sekertech | Bilişim Danışmanlığı</title>
+<meta name="description" content="Sekertech - Yazılım geliştirme ve BT altyapı hizmetleri veren bilgisayar danışmanlığı firması.">
+<style>
+  :root{
+    --bg:#0b1220;
+    --bg-alt:#0f1829;
+    --card:#121c30;
+    --border:#223049;
+    --text:#e8edf5;
+    --text-dim:#a7b3c6;
+    --accent:#4f8cff;
+    --accent-2:#36d1c4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  header{
+    position:sticky;top:0;
+    background:rgba(11,18,32,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    z-index:10;
+  }
+  nav{
+    max-width:1100px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;
+  }
+  .logo{
+    font-weight:700;font-size:1.25rem;letter-spacing:-0.02em;
+    display:flex;align-items:center;gap:8px;
+  }
+  .logo-mark{
+    width:28px;height:28px;border-radius:8px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:inline-block;
+  }
+  nav a{color:var(--text-dim);text-decoration:none;margin-left:28px;font-size:0.95rem;}
+  nav a:hover{color:var(--text);}
+  .hero{
+    max-width:1100px;margin:0 auto;
+    padding:100px 24px 80px;
+    text-align:center;
+  }
+  .hero h1{
+    font-size:clamp(2.2rem,5vw,3.4rem);
+    font-weight:700;letter-spacing:-0.03em;
+    background:linear-gradient(135deg,var(--text) 40%,var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p{
+    max-width:620px;margin:22px auto 0;
+    color:var(--text-dim);font-size:1.1rem;
+  }
+  .cta{
+    margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  }
+  .btn{
+    padding:12px 26px;border-radius:10px;font-weight:600;font-size:0.95rem;
+    text-decoration:none;display:inline-block;transition:transform .15s ease,opacity .15s ease;
+  }
+  .btn-primary{background:var(--accent);color:#fff;}
+  .btn-secondary{border:1px solid var(--border);color:var(--text);}
+  .btn:hover{transform:translateY(-2px);opacity:0.92;}
+  section{max-width:1100px;margin:0 auto;padding:60px 24px;}
+  .section-title{
+    font-size:1.8rem;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em;
+  }
+  .section-sub{color:var(--text-dim);margin-bottom:40px;max-width:600px;}
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:16px;padding:28px;
+  }
+  .card .icon{
+    width:44px;height:44px;border-radius:10px;
+    background:rgba(79,140,255,0.12);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;color:var(--accent-2);font-size:1.3rem;
+  }
+  .card h3{font-size:1.15rem;margin-bottom:10px;}
+  .card p{color:var(--text-dim);font-size:0.95rem;}
+  .about-box{
+    background:var(--bg-alt);border:1px solid var(--border);
+    border-radius:16px;padding:36px;
+  }
+  .about-box p{color:var(--text-dim);}
+  .about-box p + p{margin-top:14px;}
+  footer{
+    border-top:1px solid var(--border);
+    padding:32px 24px;text-align:center;color:var(--text-dim);font-size:0.9rem;
+  }
+  footer a{color:var(--accent-2);text-decoration:none;}
+  @media (max-width:640px){
+    nav a:not(.btn){display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><span class="logo-mark"></span>Sekertech</div>
+    <div>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Bilişimde güvenilir danışmanınız</h1>
+  <p>Sekertech, işletmelere yazılım geliştirme ve BT altyapı hizmetleri sunan bir bilgisayar danışmanlığı firmasıdır. İhtiyacınıza özel çözümler tasarlar, kurar ve işletiriz.</p>
+  <div class="cta">
+    <a href="#iletisim" class="btn btn-primary">Bizimle İletişime Geçin</a>
+    <a href="#hizmetler" class="btn btn-secondary">Hizmetlerimiz</a>
+  </div>
+</section>
+
+<section id="hizmetler">
+  <h2 class="section-title">Hizmetlerimiz</h2>
+  <p class="section-sub">Yazılımdan altyapıya, uçtan uca bilişim danışmanlığı.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">&lt;/&gt;</div>
+      <h3>Yazılım Geliştirme</h3>
+      <p>İşletmenize özel web, masaüstü ve mobil uygulamalar; mevcut sistemlerinize entegrasyon ve otomasyon çözümleri.</p>
+    </div>
+    <div class="card">
+      <div class="icon">&#9881;</div>
+      <h3>BT Altyapı Hizmetleri</h3>
+      <p>Sunucu kurulumu, ağ yönetimi, bulut altyapısı ve sistem güvenliği konularında uçtan uca kurulum ve bakım.</p>
+    </div>
+    <div class="card">
+      <div class="icon">&#128274;</div>
+      <h3>Danışmanlık &amp; Destek</h3>
+      <p>Teknoloji yol haritası planlama, sistem denetimi ve sürekli teknik destek ile işinizin büyümesine eşlik ederiz.</p>
+    </div>
+  </div>
+</section>
+
+<section id="hakkimizda">
+  <h2 class="section-title">Hakkımızda</h2>
+  <div class="about-box">
+    <p>Sekertech, küçük ve orta ölçekli işletmelerin dijital dönüşüm süreçlerinde yanında olmak için kurulmuş bir bilişim danışmanlığı firmasıdır.</p>
+    <p>Yazılım geliştirme ve BT altyapı hizmetlerini bir araya getirerek, müşterilerimize tek noktadan uçtan uca teknoloji çözümleri sunuyoruz.</p>
+  </div>
+</section>
+
+<section id="iletisim">
+  <h2 class="section-title">İletişim</h2>
+  <p class="section-sub">Projeniz hakkında konuşmak için bize ulaşın.</p>
+  <div class="about-box">
+    <p>E-posta: <a href="mailto:iamerdemseker@gmail.com" style="color:var(--accent-2)">iamerdemseker@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> Sekertech. Tüm hakları saklıdır.
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
