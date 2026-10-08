@@ -3,107 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sekertech | Bilişim Danışmanlığı</title>
-<meta name="description" content="Sekertech - Yazılım geliştirme ve BT altyapı hizmetleri veren bilgisayar danışmanlığı firması.">
+<title>Sekertech | Bilgisayar Danışmanlığı, Yazılım ve Altyapı Hizmetleri</title>
+<meta name="description" content="Sekertech; yazılım geliştirme, BT altyapı kurulumu ve bilgisayar danışmanlığı hizmetleri sunan bir teknoloji firmasıdır.">
 <style>
   :root{
-    --bg:#0b1220;
-    --bg-alt:#0f1829;
-    --card:#121c30;
-    --border:#223049;
-    --text:#e8edf5;
-    --text-dim:#a7b3c6;
-    --accent:#4f8cff;
-    --accent-2:#36d1c4;
+    --bg:#0c1220;
+    --bg-alt:#0f1726;
+    --card:#131d30;
+    --border:#243249;
+    --text:#e7ecf4;
+    --text-dim:#9fadc2;
+    --accent:#3f7de0;
+    --accent-2:#2bb6a3;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     background:var(--bg);
     color:var(--text);
-    line-height:1.6;
+    line-height:1.65;
+    font-size:16px;
   }
+  a{color:inherit;}
   header{
     position:sticky;top:0;
-    background:rgba(11,18,32,0.9);
+    background:rgba(12,18,32,0.92);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--border);
-    z-index:10;
+    z-index:20;
   }
   nav{
-    max-width:1100px;margin:0 auto;
+    max-width:1140px;margin:0 auto;
     display:flex;align-items:center;justify-content:space-between;
-    padding:18px 24px;
+    padding:16px 24px;
   }
   .logo{
-    font-weight:700;font-size:1.25rem;letter-spacing:-0.02em;
-    display:flex;align-items:center;gap:8px;
+    font-weight:700;font-size:1.2rem;letter-spacing:-0.02em;
+    display:flex;align-items:center;gap:9px;text-decoration:none;
   }
   .logo-mark{
-    width:28px;height:28px;border-radius:8px;
+    width:26px;height:26px;border-radius:7px;flex:none;
     background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    display:inline-block;
   }
-  nav a{color:var(--text-dim);text-decoration:none;margin-left:28px;font-size:0.95rem;}
-  nav a:hover{color:var(--text);}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{color:var(--text-dim);text-decoration:none;font-size:0.93rem;}
+  .nav-links a:hover{color:var(--text);}
+  .nav-cta{
+    background:var(--accent);color:#fff!important;padding:9px 18px;border-radius:8px;
+    font-weight:600;font-size:0.88rem!important;
+  }
+
   .hero{
-    max-width:1100px;margin:0 auto;
-    padding:100px 24px 80px;
-    text-align:center;
+    max-width:1140px;margin:0 auto;
+    padding:88px 24px 70px;
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    color:var(--accent-2);font-size:0.82rem;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.06em;
+    margin-bottom:18px;
   }
   .hero h1{
-    font-size:clamp(2.2rem,5vw,3.4rem);
-    font-weight:700;letter-spacing:-0.03em;
-    background:linear-gradient(135deg,var(--text) 40%,var(--accent-2));
-    -webkit-background-clip:text;background-clip:text;color:transparent;
+    font-size:clamp(2rem,4vw,2.9rem);
+    font-weight:700;letter-spacing:-0.025em;
+    color:var(--text);
   }
   .hero p{
-    max-width:620px;margin:22px auto 0;
-    color:var(--text-dim);font-size:1.1rem;
+    margin-top:20px;color:var(--text-dim);font-size:1.05rem;max-width:520px;
   }
-  .cta{
-    margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
-  }
+  .cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;}
   .btn{
-    padding:12px 26px;border-radius:10px;font-weight:600;font-size:0.95rem;
-    text-decoration:none;display:inline-block;transition:transform .15s ease,opacity .15s ease;
+    padding:12px 24px;border-radius:9px;font-weight:600;font-size:0.93rem;
+    text-decoration:none;display:inline-block;transition:transform .15s ease,opacity .15s ease,background .15s ease;
+    border:1px solid transparent;
   }
   .btn-primary{background:var(--accent);color:#fff;}
   .btn-secondary{border:1px solid var(--border);color:var(--text);}
-  .btn:hover{transform:translateY(-2px);opacity:0.92;}
-  section{max-width:1100px;margin:0 auto;padding:60px 24px;}
-  .section-title{
-    font-size:1.8rem;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em;
+  .btn:hover{transform:translateY(-1px);opacity:0.93;}
+
+  .hero-panel{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:26px;
   }
-  .section-sub{color:var(--text-dim);margin-bottom:40px;max-width:600px;}
-  .grid{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;
+  .hero-panel-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:13px 0;border-bottom:1px solid var(--border);font-size:0.9rem;
   }
-  .card{
-    background:var(--card);border:1px solid var(--border);
-    border-radius:16px;padding:28px;
+  .hero-panel-row:last-child{border-bottom:none;}
+  .hero-panel-row span:first-child{color:var(--text-dim);}
+  .tag{
+    font-size:0.75rem;font-weight:600;padding:3px 9px;border-radius:6px;
+    background:rgba(43,182,163,0.14);color:var(--accent-2);
   }
-  .card .icon{
-    width:44px;height:44px;border-radius:10px;
-    background:rgba(79,140,255,0.12);
+
+  section{max-width:1140px;margin:0 auto;padding:64px 24px;}
+  .section-head{margin-bottom:40px;max-width:640px;}
+  .kicker{
+    color:var(--accent-2);font-weight:600;font-size:0.8rem;
+    text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;
+  }
+  .section-title{font-size:1.7rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:10px;}
+  .section-sub{color:var(--text-dim);font-size:1rem;}
+
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+  .service-card{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px;
+  }
+  .service-card .icon{
+    width:40px;height:40px;border-radius:9px;
+    background:rgba(63,125,224,0.14);
     display:flex;align-items:center;justify-content:center;
-    margin-bottom:18px;color:var(--accent-2);font-size:1.3rem;
+    margin-bottom:16px;color:var(--accent);font-size:1.15rem;font-weight:700;
   }
-  .card h3{font-size:1.15rem;margin-bottom:10px;}
-  .card p{color:var(--text-dim);font-size:0.95rem;}
-  .about-box{
-    background:var(--bg-alt);border:1px solid var(--border);
-    border-radius:16px;padding:36px;
+  .service-card h3{font-size:1.08rem;margin-bottom:8px;}
+  .service-card p{color:var(--text-dim);font-size:0.92rem;margin-bottom:12px;}
+  .service-card ul{list-style:none;}
+  .service-card li{
+    color:var(--text-dim);font-size:0.88rem;padding:5px 0 5px 18px;position:relative;
   }
-  .about-box p{color:var(--text-dim);}
+  .service-card li::before{
+    content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;
+    background:var(--accent-2);
+  }
+
+  .process{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+  .process-step{
+    border:1px solid var(--border);border-radius:14px;padding:24px;background:var(--bg-alt);
+    position:relative;
+  }
+  .process-step .num{
+    font-size:0.8rem;font-weight:700;color:var(--accent-2);margin-bottom:10px;
+    letter-spacing:0.04em;
+  }
+  .process-step h3{font-size:1.02rem;margin-bottom:6px;}
+  .process-step p{color:var(--text-dim);font-size:0.88rem;}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+  .about-box p{color:var(--text-dim);font-size:0.97rem;}
   .about-box p + p{margin-top:14px;}
+  .stack-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;}
+  .stack-tags span{
+    border:1px solid var(--border);padding:6px 12px;border-radius:7px;
+    font-size:0.82rem;color:var(--text-dim);
+  }
+
+  .checklist{display:flex;flex-direction:column;gap:14px;}
+  .checklist .item{display:flex;gap:12px;align-items:flex-start;}
+  .checklist .mark{
+    flex:none;width:22px;height:22px;border-radius:6px;background:rgba(43,182,163,0.14);
+    color:var(--accent-2);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;
+    margin-top:2px;
+  }
+  .checklist h4{font-size:0.98rem;margin-bottom:3px;}
+  .checklist p{color:var(--text-dim);font-size:0.88rem;}
+
+  .faq-item{
+    border-bottom:1px solid var(--border);padding:20px 0;
+  }
+  .faq-item h3{font-size:1rem;margin-bottom:8px;}
+  .faq-item p{color:var(--text-dim);font-size:0.92rem;}
+
+  .contact-wrap{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:36px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;
+  }
+  .contact-info p{color:var(--text-dim);font-size:0.95rem;margin-bottom:18px;}
+  .contact-line{display:flex;gap:12px;align-items:center;padding:10px 0;font-size:0.92rem;}
+  .contact-line .ic{
+    width:30px;height:30px;border-radius:7px;background:rgba(63,125,224,0.14);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);flex:none;font-size:0.85rem;
+  }
+  .contact-side{
+    border-left:1px solid var(--border);padding-left:40px;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .contact-side .big{font-size:1.3rem;font-weight:700;margin-bottom:8px;}
+  .contact-side p{color:var(--text-dim);font-size:0.9rem;margin-bottom:18px;}
+
   footer{
     border-top:1px solid var(--border);
-    padding:32px 24px;text-align:center;color:var(--text-dim);font-size:0.9rem;
+    padding:36px 24px;
   }
-  footer a{color:var(--accent-2);text-decoration:none;}
+  .footer-wrap{
+    max-width:1140px;margin:0 auto;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  }
+  .footer-wrap .logo{font-size:1rem;}
+  footer .meta{color:var(--text-dim);font-size:0.85rem;}
+  footer .meta a{color:var(--accent-2);text-decoration:none;}
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;}
+    .split{grid-template-columns:1fr;}
+    .contact-wrap{grid-template-columns:1fr;}
+    .contact-side{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:28px;}
+  }
   @media (max-width:640px){
-    nav a:not(.btn){display:none;}
+    .nav-links a:not(.nav-cta){display:none;}
   }
 </style>
 </head>
@@ -111,64 +209,204 @@
 
 <header>
   <nav>
-    <div class="logo"><span class="logo-mark"></span>Sekertech</div>
-    <div>
+    <a href="#top" class="logo"><span class="logo-mark"></span>Sekertech</a>
+    <div class="nav-links">
       <a href="#hizmetler">Hizmetler</a>
+      <a href="#surec">Sürecimiz</a>
       <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#iletisim">İletişim</a>
+      <a href="#sss">S.S.S</a>
+      <a href="#iletisim" class="nav-cta">İletişime Geç</a>
     </div>
   </nav>
 </header>
 
-<section class="hero">
-  <h1>Bilişimde güvenilir danışmanınız</h1>
-  <p>Sekertech, işletmelere yazılım geliştirme ve BT altyapı hizmetleri sunan bir bilgisayar danışmanlığı firmasıdır. İhtiyacınıza özel çözümler tasarlar, kurar ve işletiriz.</p>
-  <div class="cta">
-    <a href="#iletisim" class="btn btn-primary">Bizimle İletişime Geçin</a>
-    <a href="#hizmetler" class="btn btn-secondary">Hizmetlerimiz</a>
+<div id="top" class="hero">
+  <div>
+    <div class="eyebrow">Bilgisayar Danışmanlığı</div>
+    <h1>İşletmenizin teknoloji ortağı</h1>
+    <p>Sekertech olarak işletmelere yazılım geliştirme ve BT altyapı hizmetleri sunuyoruz. Sistemlerinizi kurar, mevcut altyapınızı iyileştirir ve büyüdükçe yanınızda oluruz.</p>
+    <div class="cta">
+      <a href="#iletisim" class="btn btn-primary">Ücretsiz Ön Görüşme Planla</a>
+      <a href="#hizmetler" class="btn btn-secondary">Hizmetleri İncele</a>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="hero-panel-row"><span>Yazılım Geliştirme</span><span class="tag">Web / Masaüstü</span></div>
+    <div class="hero-panel-row"><span>Altyapı &amp; Sunucu</span><span class="tag">Kurulum / Bakım</span></div>
+    <div class="hero-panel-row"><span>Ağ &amp; Güvenlik</span><span class="tag">Denetim</span></div>
+    <div class="hero-panel-row"><span>Teknik Destek</span><span class="tag">Sürekli</span></div>
+  </div>
+</div>
+
+<section id="hizmetler">
+  <div class="section-head">
+    <div class="kicker">Hizmetlerimiz</div>
+    <h2 class="section-title">Yazılımdan altyapıya tek elden çözüm</h2>
+    <p class="section-sub">İhtiyacınıza göre tek bir hizmet ya da uçtan uca bir paket olarak çalışabiliriz.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="icon">&lt;/&gt;</div>
+      <h3>Yazılım Geliştirme</h3>
+      <p>İşletmenize özel web ve masaüstü uygulamalar, mevcut sistemlere entegrasyonlar.</p>
+      <ul>
+        <li>Özel iş uygulamaları</li>
+        <li>İç süreç otomasyonu</li>
+        <li>Mevcut yazılımlara entegrasyon</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="icon">&#9881;</div>
+      <h3>BT Altyapı Hizmetleri</h3>
+      <p>Sunucu, ağ ve bulut altyapınızın kurulumu, izlenmesi ve bakımı.</p>
+      <ul>
+        <li>Sunucu kurulum ve yönetimi</li>
+        <li>Ağ altyapısı ve kablolama</li>
+        <li>Bulut geçişi ve yedekleme</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="icon">&#128274;</div>
+      <h3>Güvenlik &amp; Denetim</h3>
+      <p>Sistemlerinizin güvenlik açıklarını tespit eder, önlem planı çıkarırız.</p>
+      <ul>
+        <li>Güvenlik denetimi</li>
+        <li>Erişim ve yetki yönetimi</li>
+        <li>Veri yedekleme politikaları</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="icon">&#9742;</div>
+      <h3>Danışmanlık &amp; Destek</h3>
+      <p>Teknoloji kararlarında yol haritası çıkarır, sürekli destek sağlarız.</p>
+      <ul>
+        <li>Teknoloji yol haritası</li>
+        <li>Uzaktan / yerinde destek</li>
+        <li>Personel teknik eğitimi</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section id="hizmetler">
-  <h2 class="section-title">Hizmetlerimiz</h2>
-  <p class="section-sub">Yazılımdan altyapıya, uçtan uca bilişim danışmanlığı.</p>
-  <div class="grid">
-    <div class="card">
-      <div class="icon">&lt;/&gt;</div>
-      <h3>Yazılım Geliştirme</h3>
-      <p>İşletmenize özel web, masaüstü ve mobil uygulamalar; mevcut sistemlerinize entegrasyon ve otomasyon çözümleri.</p>
+<section id="surec">
+  <div class="section-head">
+    <div class="kicker">Nasıl Çalışıyoruz</div>
+    <h2 class="section-title">Dört adımda sonuç odaklı bir süreç</h2>
+    <p class="section-sub">Her proje, ihtiyacınızı anlamamızla başlar; sürdürülebilir destekle devam eder.</p>
+  </div>
+  <div class="process">
+    <div class="process-step">
+      <div class="num">01</div>
+      <h3>Keşif &amp; Analiz</h3>
+      <p>Mevcut sistemlerinizi ve ihtiyaçlarınızı birlikte değerlendiririz.</p>
     </div>
-    <div class="card">
-      <div class="icon">&#9881;</div>
-      <h3>BT Altyapı Hizmetleri</h3>
-      <p>Sunucu kurulumu, ağ yönetimi, bulut altyapısı ve sistem güvenliği konularında uçtan uca kurulum ve bakım.</p>
+    <div class="process-step">
+      <div class="num">02</div>
+      <h3>Planlama</h3>
+      <p>Kapsam, zaman çizelgesi ve bütçeyi netleştirip bir yol haritası sunarız.</p>
     </div>
-    <div class="card">
-      <div class="icon">&#128274;</div>
-      <h3>Danışmanlık &amp; Destek</h3>
-      <p>Teknoloji yol haritası planlama, sistem denetimi ve sürekli teknik destek ile işinizin büyümesine eşlik ederiz.</p>
+    <div class="process-step">
+      <div class="num">03</div>
+      <h3>Geliştirme &amp; Kurulum</h3>
+      <p>Yazılımı geliştirir ya da altyapıyı kurar, düzenli olarak ilerlemeyi paylaşırız.</p>
+    </div>
+    <div class="process-step">
+      <div class="num">04</div>
+      <h3>Teslim &amp; Destek</h3>
+      <p>Devreye alır, ekibinizi eğitir ve ihtiyaç halinde sürekli destek veririz.</p>
     </div>
   </div>
 </section>
 
 <section id="hakkimizda">
-  <h2 class="section-title">Hakkımızda</h2>
-  <div class="about-box">
-    <p>Sekertech, küçük ve orta ölçekli işletmelerin dijital dönüşüm süreçlerinde yanında olmak için kurulmuş bir bilişim danışmanlığı firmasıdır.</p>
-    <p>Yazılım geliştirme ve BT altyapı hizmetlerini bir araya getirerek, müşterilerimize tek noktadan uçtan uca teknoloji çözümleri sunuyoruz.</p>
+  <div class="split">
+    <div>
+      <div class="kicker">Hakkımızda</div>
+      <h2 class="section-title">Küçük ve orta ölçekli işletmelerin teknoloji ortağı</h2>
+      <div class="about-box">
+        <p>Sekertech, işletmelerin dijital dönüşüm süreçlerinde yanlarında olmak için kurulmuş bir bilgisayar danışmanlığı firmasıdır.</p>
+        <p>Yazılım geliştirme ile BT altyapı hizmetlerini bir araya getirerek, müşterilerimize tek noktadan uçtan uca çözümler sunuyoruz. Amacımız, teknolojiyi işinizin önünde bir engel değil, büyümenizi hızlandıran bir araç haline getirmek.</p>
+      </div>
+      <div class="stack-tags">
+        <span>Windows Server</span>
+        <span>Linux</span>
+        <span>Bulut Altyapısı</span>
+        <span>Ağ Güvenliği</span>
+        <span>Özel Yazılım</span>
+        <span>Veritabanı Yönetimi</span>
+      </div>
+    </div>
+    <div class="checklist">
+      <div class="item">
+        <div class="mark">&#10003;</div>
+        <div><h4>Tek noktadan iletişim</h4><p>Yazılım ve altyapı ihtiyaçlarınız için tek bir muhatapla çalışırsınız.</p></div>
+      </div>
+      <div class="item">
+        <div class="mark">&#10003;</div>
+        <div><h4>İhtiyaca göre esnek çözümler</h4><p>Hazır paket yerine işinize uygun, ölçeklenebilir çözümler üretiriz.</p></div>
+      </div>
+      <div class="item">
+        <div class="mark">&#10003;</div>
+        <div><h4>Şeffaf süreç</h4><p>Her aşamada ne yaptığımızı ve neden yaptığımızı açıkça paylaşırız.</p></div>
+      </div>
+      <div class="item">
+        <div class="mark">&#10003;</div>
+        <div><h4>Kurulum sonrası destek</h4><p>Proje bitince ortadan kaybolmayız; sürdürülebilir destek sağlarız.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sss">
+  <div class="section-head">
+    <div class="kicker">Sıkça Sorulan Sorular</div>
+    <h2 class="section-title">Merak edilenler</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>Hangi büyüklükte işletmelerle çalışıyorsunuz?</h3>
+      <p>Küçük ölçekli işletmelerden orta ölçekli şirketlere kadar, ihtiyaca göre uyarlanmış çözümlerle çalışıyoruz.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Sadece yazılım mı, sadece altyapı mı, yoksa ikisi birlikte mi alabilirim?</h3>
+      <p>İhtiyacınıza göre tek bir hizmeti veya her ikisini birlikte uçtan uca bir paket olarak sunabiliriz.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Proje sonrası destek veriyor musunuz?</h3>
+      <p>Evet, teslim sonrasında da uzaktan veya yerinde teknik destek sağlıyoruz.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Nasıl teklif alabilirim?</h3>
+      <p>İletişim bölümündeki e-posta adresinden bize ulaşmanız yeterli; ihtiyacınızı dinleyip kısa sürede dönüş yapıyoruz.</p>
+    </div>
   </div>
 </section>
 
 <section id="iletisim">
-  <h2 class="section-title">İletişim</h2>
-  <p class="section-sub">Projeniz hakkında konuşmak için bize ulaşın.</p>
-  <div class="about-box">
-    <p>E-posta: <a href="mailto:erdem@sekertech.com" style="color:var(--accent-2)">erdem@sekertech.com</a></p>
+  <div class="section-head">
+    <div class="kicker">İletişim</div>
+    <h2 class="section-title">Projenizi konuşalım</h2>
+    <p class="section-sub">İhtiyacınızı kısaca anlatın, size dönüş yapalım.</p>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <p>Yazılım geliştirme veya BT altyapı ihtiyaçlarınız için aşağıdaki e-posta adresinden bize ulaşabilirsiniz.</p>
+      <div class="contact-line"><span class="ic">@</span><a href="mailto:erdem@sekertech.com">erdem@sekertech.com</a></div>
+      <div class="contact-line"><span class="ic">&#128205;</span>Türkiye</div>
+    </div>
+    <div class="contact-side">
+      <div class="big">Hızlı dönüş garantisi</div>
+      <p>Gönderdiğiniz talepleri kısa sürede değerlendirip size geri dönüyoruz.</p>
+      <a href="mailto:erdem@sekertech.com" class="btn btn-primary" style="width:fit-content;">E-posta Gönder</a>
+    </div>
   </div>
 </section>
 
 <footer>
-  &copy; <span id="year"></span> Sekertech. Tüm hakları saklıdır.
+  <div class="footer-wrap">
+    <a href="#top" class="logo"><span class="logo-mark"></span>Sekertech</a>
+    <div class="meta">&copy; <span id="year"></span> Sekertech &middot; Bilgisayar Danışmanlığı, Yazılım ve Altyapı Hizmetleri</div>
+  </div>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
